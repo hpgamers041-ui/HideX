@@ -76,11 +76,6 @@ class MainActivity : ComponentActivity() {
         }
     }
 
-    override fun onStop() {
-        super.onStop()
-        vaultKey?.fill(0)
-        vaultKey = null
-    }
 
     private fun setPin(pin: String): Boolean {
         if (pin.length !in 6..12 || !pin.all(Char::isDigit)) return false
